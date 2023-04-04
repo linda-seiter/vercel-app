@@ -7,7 +7,7 @@ import {
   SandpackPreview,
 } from "@codesandbox/sandpack-react";
 
-import code from "./index.js?raw";
+import code from "./files/index.js?raw";
 
 const files = {
   "/index.js": {
