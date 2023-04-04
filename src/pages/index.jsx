@@ -6,17 +6,11 @@ export default function Home() {
       Sample problems
       <ul>
         <li>
-          <Link to="/lesson1/challenge1/playground">
-            {" "}
-            lesson1/challenge1/playground{" "}
-          </Link>
+          <Link to="/lesson1/challenge1"> lesson1/challenge1 </Link>
         </li>
 
         <li>
-          <Link to="/lesson1/challenge2/playground">
-            {" "}
-            lesson1/challenge2/playground{" "}
-          </Link>
+          <Link to="/lesson1/challenge2"> lesson1/challenge2 </Link>
         </li>
       </ul>
     </div>
