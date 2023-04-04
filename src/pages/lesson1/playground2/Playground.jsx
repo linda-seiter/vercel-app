@@ -23,7 +23,7 @@ export default function Playground() {
     <SandpackProvider files={files}>
       <SandpackLayout>
         <SandpackCodeEditor showLineNumbers showTabs />
-        <SandpackTests verbose="false" />
+        <SandpackTests />
         <SandpackConsole resetOnPreviewRestart="true" />
       </SandpackLayout>
     </SandpackProvider>
