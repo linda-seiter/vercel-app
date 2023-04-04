@@ -1,10 +1,8 @@
 import {
   SandpackProvider,
   SandpackLayout,
-  SandpackTests,
   SandpackCodeEditor,
   SandpackConsole,
-  SandpackPreview,
 } from "@codesandbox/sandpack-react";
 
 import code from "./index.js?raw";

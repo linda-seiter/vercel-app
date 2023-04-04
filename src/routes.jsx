@@ -1,17 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
 
-const pages = import.meta.glob("./pages/**/*.jsx", { eager: true });
+const pages = import.meta.glob("./pages/**/Playground.jsx", { eager: true });
 
 const routes = [];
 for (const path of Object.keys(pages)) {
-  let fileName = path.match(/\.\/pages\/(.*)\.jsx$/)?.[1];
+  let fileName = path.match(/\.\/pages\/(.*)Playground\.jsx$/)?.[1];
   if (!fileName) {
     continue;
   }
-  fileName = fileName.replace("/Playground", ""); //remove from end of path
-
   routes.push({
-    path: fileName === "index" ? "/" : `/${fileName.toLowerCase()}`,
+    path: `/${fileName.toLowerCase()}`,
     Element: pages[path].default,
     loader: pages[path]?.loader,
     action: pages[path]?.action,
