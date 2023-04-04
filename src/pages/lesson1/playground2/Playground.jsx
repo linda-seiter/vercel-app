@@ -4,14 +4,17 @@ import {
   SandpackTests,
   SandpackCodeEditor,
   SandpackConsole,
-  SandpackPreview,
 } from "@codesandbox/sandpack-react";
 
-import code from "./challenge1/index.js?raw";
+import code from "./index.js?raw";
+import test from "./index.test.js?raw";
 
 const files = {
   "/index.js": {
     code: code,
+  },
+  "/index.test.js": {
+    code: test,
   },
 };
 
@@ -20,7 +23,8 @@ export default function Playground() {
     <SandpackProvider files={files}>
       <SandpackLayout>
         <SandpackCodeEditor showLineNumbers showTabs />
-        <SandpackConsole resetOnPreviewRestart="true" standalone="true" />
+        <SandpackTests />
+        <SandpackConsole resetOnPreviewRestart="true" />
       </SandpackLayout>
     </SandpackProvider>
   );
